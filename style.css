@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&family=Lexend+Deca:wght@100..900&display=swap");
+@keyframes slideInlefts{
+  from{
+    transform: translateX(-100px);
+    to{
+      transform: translateX(0);
+    }
+  }
+
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --Bright-orange: hsl(31, 77%, 52%);
+  --Dark-cyan: hsl(184, 100%, 22%);
+  --Very-dark-cyan: hsl(179, 100%, 13%);
+  --tranparent-white: hsl(0, 0%, 100%, 0.75);
+  --very-light-gray: hsl(0, 0%, 95%);
+  --ff-big-shoulders-display: "Big Shoulder Display", sans-serif;
+  --ff-lexand-deca: "Lexand Deca", sans-serif;
+}
+html,
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%;
+}
+body {
+  font-size: 15px;
+}
+main {
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+}
+section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  
+}
+/* cards */
+.cards{
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 2rem;
+}
+img{
+    width: 30%;
+}
+h2{
+    color: var(--very-light-gray);
+    font-family: var(--ff-big-shoulders-display);
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+p{
+    color: var(--tranparent-white);
+    font-family: var(--ff-lexand-deca);
+    font-weight: 400;
+    font-size: 20;
+    line-height: 1.4rem;
+    
+}
+button{
+    border-radius:  5rem;
+    width: 100%;
+    height: 3rem;
+    border: none;
+    font-family: var(--ff-lexand-deca);
+
+    transition-property: transform;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+}
+#card-1{
+  transform: translateX(-10px);
+  transition-property: transform;
+  transition-duration: 0.3s;
+  transition-delay: 0s;
+    background-color: var(--Bright-orange);
+    border-top-left-radius: 3rem;
+    border-bottom-left-radius: 3rem;
+    
+}
+#card-2{
+  transform: translateX(-10px);
+  transition-property: transform;
+  transition-duration: 0.3s;
+  
+  transition-delay: 0s;
+    background-color: var(--Very-dark-cyan);
+   
+}
+#card-3{
+  transform: translateX(-10px);
+  transition-property: transform;
+  transition-duration: 0.3s;
+  transition-delay: 0s;
+    background-color: var(--Dark-cyan);
+    border-top-right-radius: 3rem;
+    border-bottom-right-radius: 3rem;
+   
+    
+}
+
+button:hover{
+  transform: matrix3d(-10px);
+  color: aqua;
+
+}
+.cards :hover{
+  transform: translateY(-10px);
+  transition-property: transform;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+  transition-delay: 0s;
+
+}
+@media (max-width:320px) {
+  section{
+    flex-direction: column;
+    
+  }
+  #card-1{
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    border-bottom-left-radius: 0%;
+  }
+  #card-3{
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    border-top-right-radius: 0px;
+  }
+  
+  }
+  .motion{
+    animation-name: slideInleft;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-direction: reverse;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-fill-mode: none;
+    animation-direction: reverse;
+
+    transform: translateX(-50px);
+  }
